@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline' https://cdn.jsdelivr.net; img-src data: blob: https://cdn.simpleicons.org; media-src data: blob:; font-src data: https://fonts.gstatic.com; connect-src https://github-contributions-api.jogruber.de; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: blob: https://cdn.simpleicons.org; media-src data: blob:; font-src data: https://fonts.gstatic.com; connect-src https://github-contributions-api.jogruber.de; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="description" content="Portfolio of Muhammad Wahyu Abrory — machine learning, data, and IT.">
-  <title>Muhammad Wahyu Abrory — Portfolio</title>
+  <title>Abrory · Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=2">
   <style>
     @font-face {
       font-family: "Plus Jakarta Sans";
@@ -1614,7 +1615,8 @@
           if (!interrupted) {
             items.forEach((item, itemIndex) => {
               const delay = dotDelays?.[itemIndex];
-              experienceItemAnimations.push(revealItem(item, items.length - 1 - itemIndex, delay));
+              const cardDelay = itemIndex === 0 && delay !== undefined ? delay - 400 : delay;
+              experienceItemAnimations.push(revealItem(item, items.length - 1 - itemIndex, cardDelay));
             });
           }
           return;

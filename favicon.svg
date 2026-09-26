@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .link { fill: none; stroke: #171717; stroke-width: 5.5; stroke-linecap: round; }
+    .end { fill: #171717; }
+    @media (prefers-color-scheme: dark) {
+      .link { stroke: #f5f5f5; }
+      .end { fill: #f5f5f5; }
+    }
+  </style>
+  <path class="link" d="M30 31 15 15M34 30 49 17M34 36 47 50"/>
+  <path class="end" d="m14 7 8 8-8 8-8-8z"/>
+  <rect class="end" x="44" y="8" width="16" height="16" rx="3" transform="rotate(12 52 16)"/>
+  <circle class="end" cx="49" cy="51" r="8"/>
+  <circle cx="32" cy="33" r="8" fill="#56a76c"/>
+</svg>
